@@ -36,7 +36,14 @@ public abstract class Futbolista implements Comparable<Futbolista>{
         return this.posicion;
     }
 
-    public compareTo( objc objeto){
+    public boolean compareTo( Futbolista futbolista){
+        if (this == futbolista){
+            return true;
+        }
+
+        else{
+            return false;
+        }
 
     }
 
