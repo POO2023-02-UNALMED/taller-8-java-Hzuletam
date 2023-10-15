@@ -51,6 +51,9 @@ public abstract class Futbolista implements Comparable<Futbolista>{
         if (f == this){
             return true;
         }
+        else{
+            return false;
+        }
     }
 
     public abstract boolean jugarConLasManos();
