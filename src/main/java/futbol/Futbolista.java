@@ -1,6 +1,6 @@
 package futbol;
 
-public abstract class Futbolista implements Comparable<object>{
+public abstract class Futbolista implements Comparable<Object>{
 
     private String nombre;
     private int edad;
@@ -10,7 +10,7 @@ public abstract class Futbolista implements Comparable<object>{
         this("Maradona", 30, "delantero");
     }
 
-    public Futbolista(String nombre, int edad,String posicion){
+    public Futbolista(String nombre, int edad, String posicion){
         this.nombre = nombre;
         this.edad = edad;
         this.posicion = posicion;
@@ -36,8 +36,8 @@ public abstract class Futbolista implements Comparable<object>{
         return this.posicion;
     }
 
-    @override
-    public boolean compareTo( object futbolista){
+    @Override
+    public boolean compareTo( Object futbolista){
         Futbolista futbol = (Futbolista) futbolista;
         return Math.abs(this.getEdad()-futbol.getEdad());
     }
@@ -48,7 +48,7 @@ public abstract class Futbolista implements Comparable<object>{
 
     public abstract boolean jugarConLasManos();
 
-    @override
+    @Override
     public String ToString(){
         return  ("El futbolista " + this.getNombre() + " tiene " + this.getEdad() + ", y juega de " + this.getPosicion());
     }

@@ -27,16 +27,17 @@ public class Portero extends Futbolista{
         this.dorsal = dorsal;
     }
 
-    @override
-    public int compareTo(Portero portero){
-        return Math.abs(this.golesRecibidos - portero.getGolesRecibidos());
+    @Override
+    public int compareTo(Object portero){
+        Portero port = (Portero) portero;
+        return Math.abs(this.golesRecibidos - port.getGolesRecibidos());
     }
 
-    @override
+    @Override
     public String toString(){
         return ("El futbolista " + this.getNombre() + " tiene " + this.getEdad() + ", y juega de " + this.getPosicion() + " con el dorsal " + this.dorsal + ". Le han marcado " + this.golesRecibidos);
     } 
-    @override
+    @Override
     public boolean jugarConLasManos(){
         return true;
     }
