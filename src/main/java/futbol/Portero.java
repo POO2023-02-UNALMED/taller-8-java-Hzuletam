@@ -10,6 +10,24 @@ public class Portero extends Futbolista{
         this.dorsal = dorsal;
 
     }
+
+    public short getGolesRecibidos(){
+        return this.golesRecibidos;
+    }
+
+    public void setGolesRecibidos(short goles){
+        this.golesRecibidos = goles;
+    }
+
+    public byte getDorsal(){
+        return this.dorsal;
+    }
+
+    public void setDorsal(byte dorsal){
+        this.dorsal = dorsal;
+    }
+
+    @override
     public int compareTo(Portero portero){
         return math.abs(this.golesRecibidos - portero.getGolesRecibidos());
     }
