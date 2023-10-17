@@ -43,7 +43,7 @@ public abstract class Futbolista implements Comparable<object>{
     }
 
     public boolean equals(Futbolista f){
-        return this == futbolista
+        return this == futbolista;
     }
 
     public abstract boolean jugarConLasManos();
