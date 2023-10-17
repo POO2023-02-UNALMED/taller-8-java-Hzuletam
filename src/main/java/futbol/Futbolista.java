@@ -49,7 +49,7 @@ public abstract class Futbolista implements Comparable<Object>{
     public abstract boolean jugarConLasManos();
 
     
-    public String ToString(){
+    public String toString(){
         return  ("El futbolista " + this.getNombre() + " tiene " + this.getEdad() + ", y juega de " + this.getPosicion());
     }
 }
