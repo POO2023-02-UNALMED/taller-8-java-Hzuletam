@@ -1,4 +1,4 @@
-import java.lang.compareTo;
+package futbol;
 
 public class Jugador extends Futbolista{
 
@@ -11,8 +11,8 @@ public class Jugador extends Futbolista{
         this.dorsal = 7;
     }
 
-    public Jugador(String nombre, String posicion, int edad, short golesMarcados, byte dorsal){
-        super(nombre, posicion, edad);
+    public Jugador(String nombre, int edad, String posicion, short golesMarcados, byte dorsal){
+        super(nombre, edad, posicion);
         this.golesMarcados = golesMarcados;
         this.dorsal = dorsal;
     }
@@ -39,10 +39,11 @@ public class Jugador extends Futbolista{
 
     @override
     public String toString(){
-        return ("El futbolista " + this.getNombre() + " tiene " + this.getEdad() + " y juega de " + this.posicion + " con el dorsal " + this.dorsal + ". Ha marcado " + this.goles);
+        return ("El futbolista " + this.getNombre() + " tiene " + this.getEdad() + " y juega de " + this.getPosicion() + " con el dorsal " + this.dorsal + ". Ha marcado " + this.golesMarcados);
     }
+
     @override
-    public boolean jugarConLasManos(Futbolista futbolista1, Futbolista futbolista2 ){
+    public boolean jugarConLasManos(){
         return false;
     }
 

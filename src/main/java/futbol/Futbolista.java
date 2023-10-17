@@ -1,16 +1,16 @@
-import java.lang.compareTo;
+package futbol;
 
-public abstract class Futbolista implements Comparable<Futbolista>{
+public abstract class Futbolista implements Comparable<object>{
 
     private String nombre;
     private int edad;
     private final String posicion;
 
     public Futbolista(){
-        this("Maradona","delantero",30);
+        this("Maradona", 30, "delantero");
     }
 
-    public Futbolista(String nombre, String posicion, int edad){
+    public Futbolista(String nombre, int edad,String posicion){
         this.nombre = nombre;
         this.edad = edad;
         this.posicion = posicion;
@@ -37,8 +37,9 @@ public abstract class Futbolista implements Comparable<Futbolista>{
     }
 
     @override
-    public boolean compareTo( Futbolista futbolista){
-        return math.abs(this.getEdad()-futbolista.getEdad());
+    public boolean compareTo( object futbolista){
+        Futbolista futbol = (Futbolista) futbolista;
+        return Math.abs(this.getEdad()-futbol.getEdad());
     }
 
     public boolean equals(Futbolista f){
@@ -49,6 +50,6 @@ public abstract class Futbolista implements Comparable<Futbolista>{
 
     @override
     public String ToString(){
-        return  "El futbolista " + this.nombre + " tiene " + this.edad + ", y juega de " + this.posicion;
+        return  ("El futbolista " + this.getNombre() + " tiene " + this.getEdad() + ", y juega de " + this.getPosicion());
     }
 }
