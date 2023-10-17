@@ -36,28 +36,18 @@ public abstract class Futbolista implements Comparable<Futbolista>{
         return this.posicion;
     }
 
+    @override
     public boolean compareTo( Futbolista futbolista){
-        if (this == futbolista){
-            return true;
-        }
-
-        else{
-            return false;
-        }
-
+        return math.abs(this.getEdad()-futbolista.getEdad());
     }
 
     public boolean equals(Futbolista f){
-        if (f == this){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return this == futbolista
     }
 
     public abstract boolean jugarConLasManos();
 
+    @override
     public String ToString(){
         return  "El futbolista " + this.nombre + " tiene " + this.edad + ", y juega de " + this.posicion;
     }
